@@ -62,6 +62,7 @@
 		830F4A88206917CF006C8C87 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				83EB649B2067828B002D9B44 /* ML Model */,
 				830F4A89206917D7006C8C87 /* Library */,
 			);
 			path = Common;
@@ -105,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				830F4A88206917CF006C8C87 /* Common */,
-				83EB649B2067828B002D9B44 /* ML Model */,
 				83EB64802066AC84002D9B44 /* Model */,
 				83EB64832066AC98002D9B44 /* View */,
 				83EB64842066ACA4002D9B44 /* Controller */,

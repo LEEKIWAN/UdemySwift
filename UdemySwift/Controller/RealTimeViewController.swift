@@ -17,6 +17,9 @@ class RealTimeViewController: UIViewController {
     
     let visionRequestHandler = VNSequenceRequestHandler()
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var perecentLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let spec = VideoSpec(fps: 3, size: CGSize(width: self.view.frame.size.width, height: self.view.frame.size.height))
@@ -52,7 +55,12 @@ class RealTimeViewController: UIViewController {
     
     func handleObjectDetection(request: VNRequest, error: Error?) {
         if let result = request.results?.first as? VNClassificationObservation {
-            print("\(result.identifier) : \(result.confidence)")
+//            print("\(result.identifier) : \(result.confidence)")
+            DispatchQueue.main.async {
+                self.nameLabel.text = result.identifier
+                self.perecentLabel.text = "\(String(format: "%.1f", result.confidence * 100)) %"
+            }
+            
         }
     }
     
