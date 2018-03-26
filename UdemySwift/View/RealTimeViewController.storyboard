@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Real Time View Controller-->
+        <scene sceneID="Mnz-3l-FQm">
+            <objects>
+                <viewController storyboardIdentifier="RealTime" id="yM7-PM-C5t" customClass="RealTimeViewController" customModule="UdemySwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tyL-zw-VpG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Om4-OX-B68">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Om4-OX-B68" firstAttribute="leading" secondItem="CVX-Bi-SZQ" secondAttribute="leading" id="97Y-9I-XbB"/>
+                            <constraint firstItem="CVX-Bi-SZQ" firstAttribute="bottom" secondItem="Om4-OX-B68" secondAttribute="bottom" id="WeE-vR-5ue"/>
+                            <constraint firstItem="Om4-OX-B68" firstAttribute="top" secondItem="CVX-Bi-SZQ" secondAttribute="top" id="eSb-cw-hmj"/>
+                            <constraint firstItem="CVX-Bi-SZQ" firstAttribute="trailing" secondItem="Om4-OX-B68" secondAttribute="trailing" id="g6Q-jr-8GH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CVX-Bi-SZQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="Om4-OX-B68" id="7tS-rf-dfx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="58D-WN-uvP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-34" y="145"/>
+        </scene>
+    </scenes>
+</document>
